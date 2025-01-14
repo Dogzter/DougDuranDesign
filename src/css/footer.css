@@ -1,0 +1,12 @@
+footer div.socials * {
+  transition: all 300ms linear;
+}
+footer div.socials .whatsapp:hover {
+  color: #0f0;
+}
+footer div.socials .facebook:hover {
+  color: #08f;
+}
+footer div.socials .twitter:hover {
+  color: #0ff;
+}
