@@ -1,0 +1,89 @@
+header * { transition: all 200ms linear; }
+header nav {
+  z-index: 5;
+}
+header nav div.navMain {
+  background: linear-gradient(135deg, rgba(255,255,255,0)40%, rgba(0,200,255,0.3)40%, rgba(0,0,0,0)85%);
+}
+header nav div.logo {
+  background: linear-gradient(135deg, rgba(255,255,255,0)40%, rgba(0,100,255,0.5)40%, rgba(0,0,0,0)85%);
+}
+header nav .navLink {
+  color: #ddd;
+  position: relative;
+}
+header nav .navLink * {
+  z-index: 10;
+  font-size: 24px;
+}
+header nav .navLink span {
+  background: rgba(100,100,100,0.6);
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform: skew(135deg, 0);
+  z-index: 0;
+}
+header nav .navLink:hover {
+  color: #0ff;
+  /* text-shadow: 1px 1px #444, 2px 2px #444, 3px 3px #444, 4px 4px #444; */
+}
+header nav .navLink:hover span, header nav .navLink:active span {
+    width: 100%;
+    background: rgba(0,100,100,1);
+    box-shadow: 3px 0px #0aa;
+}
+header div.headerInfoBar {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(0,0,0,0)0%, rgba(0,0,0,0)20%, rgba(255,255,255,0.3)20%, rgba(0,0,0,0)85%);
+  bottom: -25px;
+  right: 30px;
+  opacity: 1;
+  user-select: none;
+}
+/* header div.headerInfoBar p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  background: rgba(150,150,150,0.5);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  transform: skew(135deg, 0);
+  opacity: 0.7;
+} */
+header div.mobileMenu {
+  opacity: 0;
+  position: absolute;
+  top: 85px;
+  right: 4%;
+  width: 92%;
+}
+header div.mobileMenu::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  /* background: rgba(255,255,255,0.5); */
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  min-width: 95%;
+  height: 60%;
+  transform: skew(135deg, 0);
+}
+
+@media screen and (min-width: 500px) {
+  /* landscape mode and above */
+  header nav div.navLinks { display: flex; }
+  header nav div.mobileBtn, header nav div.mobileMenu { display: none !important; }
+}
+@media screen and (min-width: 860px) {
+  /* tablets and above */
+  header nav .navLinks .navLink * { font-size: 36px;}
+  header nav .navLinks .navLink b { font-size: 22px;}
+}
+@media screen and (min-width: 1280px) {
+  /* HD and above */
+}
+@media screen and (min-width: 1600px) {
+  /* FHD and above */
+  header nav div.navLinks b { display: block; }
+}
