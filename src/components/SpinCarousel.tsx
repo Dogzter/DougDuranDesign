@@ -6,7 +6,7 @@ import React, { useEffect, useRef } from 'react';
 
 export default function SpinCarousel():React.ReactNode {
     
-  const dragContainerRef = useRef<HTMLDivElement>(null);
+  const dragContainerRef = useRef<any>(null);
   const spinContainerRef = useRef<HTMLDivElement>(null);
   const autoRotate = true;
   const rotateSpeed = -60;
